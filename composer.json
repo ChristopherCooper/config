@@ -1,0 +1,22 @@
+{
+    "name": "orno/config",
+    "description": "A package to DRY the storage and retrieval of config items and files. Supports YAML, INI, XML and PHP arrays.",
+    "keywords": ["orno", "config", "yaml", "xml", "ini", "array"],
+    "license": "MIT",
+    "require": {
+        "php": ">=5.4",
+        "symfony/yaml": "2.3.*"
+    },
+    "authors": [
+        {
+            "name": "Phil Bennett",
+            "email": "philipobenito@gmail.com"
+        }
+    ],
+    "autoload": {
+        "psr-0": {
+            "Orno\\Config": "src/"
+        }
+    },
+    "minimum-stability": "dev"
+}
