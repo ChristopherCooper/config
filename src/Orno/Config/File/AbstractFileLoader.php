@@ -13,11 +13,15 @@ namespace Orno\Config\File;
 abstract class AbstractFileLoader
 {
     /**
+     * The path to the config
+     *
      * @var string
      */
     protected $file;
 
     /**
+     * The key in which our parsed config file should be stored
+     *
      * @var string|integer
      */
     protected $key;
