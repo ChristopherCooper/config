@@ -22,14 +22,10 @@ class YamlFileLoader extends AbstractFileLoader
         try {
             $array = Yaml::parse($this->file);
         } catch (\Exception $e) {
-            throw new Exception\ParseException($e->getMessage());
+            throw new Exception\ParseException($e->getMessage(), 0, $e);
         }
 
-        if (is_null($array)) {
-            $array = [];
-        }
-
-        array_walk($array, function (&$val) {
+        array_walk((array) $array, function (&$val) {
             $val = (is_null($val)) ? [] : $val;
         });
 
