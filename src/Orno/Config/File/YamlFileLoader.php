@@ -25,7 +25,7 @@ class YamlFileLoader extends AbstractFileLoader
             throw new Exception\ParseException($e->getMessage(), 0, $e);
         }
 
-        array_walk($array, function ($val) {
+        array_walk($array, function (&$val) {
             $val = (is_null($val)) ? [] : $val;
         });
 
