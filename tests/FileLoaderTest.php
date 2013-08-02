@@ -5,6 +5,7 @@ namespace OrnoTest;
 use Orno\Config\File\ArrayFileLoader;
 use Orno\Config\File\YamlFileLoader;
 use Orno\Config\File\JsonFileLoader;
+use Orno\Config\File\IniFileLoader;
 
 class FileLoaderTest extends \PHPUnit_Framework_Testcase
 {
@@ -148,6 +149,54 @@ class FileLoaderTest extends \PHPUnit_Framework_Testcase
         $this->setExpectedException('Orno\Config\File\Exception\ParseException');
 
         $loader = new JsonFileLoader(__DIR__ . '/assets/json-file-malformed.json');
+        $array = $loader->parse();
+    }
+
+    public function testParsesIniFileWithoutKey()
+    {
+        $loader = new IniFileLoader(__DIR__ . '/assets/ini-file.ini');
+        $array = $loader->parse();
+
+        $this->assertInternalType('array', $array);
+        $this->assertSame(
+            $array,
+            [
+                'SomeKey' => [
+                    'SomeChildKey' => [
+                        'key1' => 'value1',
+                        'key2' => 'value2'
+                    ]
+                ]
+            ]
+        );
+    }
+
+    public function testParsesIniFileWithKey()
+    {
+        $loader = new IniFileLoader(__DIR__ . '/assets/ini-file.ini', 'some-parent-key');
+        $array = $loader->parse();
+
+        $this->assertInternalType('array', $array);
+        $this->assertSame(
+            $array,
+            [
+                'some-parent-key' => [
+                    'SomeKey' => [
+                        'SomeChildKey' => [
+                            'key1' => 'value1',
+                            'key2' => 'value2'
+                        ]
+                    ]
+                ]
+            ]
+        );
+    }
+
+    public function testIniFileLoaderThrowsExceptionWithMalformedFile()
+    {
+        $this->setExpectedException('Orno\Config\File\Exception\ParseException');
+
+        $loader = new IniFileLoader(__DIR__ . '/assets/ini-file-malformed.ini');
         $array = $loader->parse();
     }
 }
