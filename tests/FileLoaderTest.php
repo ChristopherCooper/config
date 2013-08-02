@@ -73,6 +73,14 @@ class FileLoaderTest extends \PHPUnit_Framework_Testcase
         );
     }
 
+    public function testYamlFileLoaderThrowsExceptionWithMalformedFile()
+    {
+        $this->setExpectedException('Orno\Config\File\Exception\ParseException');
+
+        $loader = new YamlFileLoader(__DIR__ . '/assets/yaml-file-malformed.yml');
+        $array = $loader->parse();
+    }
+
     public function testParsesYamlFileWithKey()
     {
         $loader = new YamlFileLoader(__DIR__ . '/assets/yaml-file.yml', 'some-parent-key');
