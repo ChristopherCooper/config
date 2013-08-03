@@ -14,7 +14,7 @@ class XmlFileLoader extends AbstractFileLoader
 {
     /**
      * Callback to achieve recursion in array walk of SimpleXMLElement objects as
-     * child elements fail is_object calls
+     * child elements fail is_object calls when iterated over
      *
      * @var \Closure
      */
