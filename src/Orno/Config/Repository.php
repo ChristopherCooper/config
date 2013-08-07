@@ -72,11 +72,9 @@ class Repository implements \ArrayAccess
      * @param  \Orno\Config\File\FileLoaderInterface $loader
      * @return \Orno\Config\Repository
      */
-    public function parseFileLoader(File\FileLoaderInterface $loader)
+    public function addFileLoader(File\FileLoaderInterface $loader)
     {
-        $parsed = $loader->parse();
-
-        $this->config = array_merge($this->config, $parsed);
+        $this->config = array_merge($this->config, $loder->parse());
 
         return $this;
     }
