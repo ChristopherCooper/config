@@ -27,7 +27,7 @@ class Repository implements \ArrayAccess
     public function __construct(array $loaders = [])
     {
         foreach ($loaders as $loader) {
-            $this->parseFileLoader($loader);
+            $this->addFileLoader($loader);
         }
     }
 
@@ -74,7 +74,7 @@ class Repository implements \ArrayAccess
      */
     public function addFileLoader(File\FileLoaderInterface $loader)
     {
-        $this->config = array_merge($this->config, $loder->parse());
+        $this->config = array_merge($this->config, $loader->parse());
 
         return $this;
     }
