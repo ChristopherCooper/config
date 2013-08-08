@@ -39,7 +39,7 @@ The above file could be parsed and accessed in the following way with a parent k
 
     // with parent key
     $loader = new \Orno\Config\File\ArrayFileLoader('path/to/config/file.php', 'db');
-    $config = (new \Orno\Config\Repository)->parseFileLoader($loader);
+    $config = (new \Orno\Config\Repository)->addFileLoader($loader);
 
     // now the config array is available in the config object
     echo $config['db']['database']; // PDO
@@ -59,7 +59,7 @@ The above file could be parsed and accessed in the following way without a paren
 
     // no parent key
     $loader = new \Orno\Config\File\YamlFileLoader('path/to/config/file.yml');
-    $config = (new \Orno\Config\Repository)->parseFileLoader($loader);
+    $config = (new \Orno\Config\Repository)->addFileLoader($loader);
 
     // now the config array is available in the config object
     echo $config['db']['database']; // PDO
@@ -79,7 +79,7 @@ To parse/access.
 
     // no parent key
     $loader = new \Orno\Config\File\IniFileLoader('path/to/config/file.ini');
-    $config = (new \Orno\Config\Repository)->parseFileLoader($loader);
+    $config = (new \Orno\Config\Repository)->addFileLoader($loader);
 
     // now the config array is available in the config object
     echo $config['db']['database']; // PDO
@@ -100,7 +100,7 @@ To parse/access.
 
     // with parent key
     $loader = new \Orno\Config\File\JsonFileLoader('path/to/config/file.json', 'db');
-    $config = (new \Orno\Config\Repository)->parseFileLoader($loader);
+    $config = (new \Orno\Config\Repository)->addFileLoader($loader);
 
     // now the config array is available in the config object
     echo $config['db']['database']; // PDO
@@ -126,7 +126,7 @@ To parse/access.
 
     // no parent key
     $loader = new \Orno\Config\File\XmlFileLoader('path/to/config/file.xml');
-    $config = (new \Orno\Config\Repository)->parseFileLoader($loader);
+    $config = (new \Orno\Config\Repository)->addFileLoader($loader);
 
     // now the config array is available in the config object
     echo $config['db']['database']; // PDO
