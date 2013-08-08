@@ -1,5 +1,7 @@
 # Orno\Config
 
+[![Buildi Status](https://travis-ci.org/orno/config.png?branch=master)](https://travis-ci.org/orno/config) [![Latest Stable Version](https://poser.pugx.org/orno/config/v/stable.png)](https://packagist.org/packages/orno/config) [![Total Downloads](https://poser.pugx.org/orno/config/downloads.png)](https://packagist.org/packages/orno/config)
+
 A package designed to DRY up the setting and retrieving of config items.
 
 ## Usage
