@@ -3,14 +3,14 @@
  * The Orno Component Library
  *
  * @author  Phil Bennett @philipobenito
- * @license http://www.opensource.org/licenses/mit-license.php MIT (see the LICENSE file)
+ * @license MIT (see the LICENSE file)
  */
 namespace Orno\Config\File;
 
 /**
  * Abstract File Loader
  */
-abstract class AbstractFileLoader
+abstract class AbstractFileLoader implements FileLoaderInterface
 {
     /**
      * The path to the config
@@ -45,9 +45,7 @@ abstract class AbstractFileLoader
     }
 
     /**
-     * Load and parse a configuration file
-     *
-     * @return array
+     * {@inheritdoc}
      */
     abstract public function parse();
 }

@@ -8,20 +8,20 @@
 namespace Orno\Config\File;
 
 /**
- * Array File Loader
+ * Json File Loader
  */
-class ArrayFileLoader extends AbstractFileLoader
+class JsonFileLoader extends AbstractFileLoader
 {
     /**
      * {@inheritdoc}
      */
     public function parse()
     {
-        $array = include $this->file;
+        $array = json_decode(file_get_contents($this->file), true);
 
-        if (! is_array($array)) {
+        if (json_last_error() !== JSON_ERROR_NONE) {
             throw new Exception\ParseException(
-                sprintf('The file (%s) must return a PHP array', $this->file)
+                sprintf('The file (%s) must contain a valid JSON string', $this->file)
             );
         }
 

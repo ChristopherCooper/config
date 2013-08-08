@@ -5,11 +5,11 @@
  * @author  Phil Bennett @philipobenito
  * @license MIT (see the LICENSE file)
  */
-namespace Orno\Config\File\Exception;
+namespace Orno\Config\Exception;
 
 /**
- * File Not Readable Exception
+ * Undefined Offset Exception
  */
-class FileNotReadableException extends \RuntimeException
+class UndefinedOffsetException extends \OutOfBoundsException
 {
 }
