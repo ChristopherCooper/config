@@ -134,3 +134,7 @@ To parse/access.
     echo $config['db']['database']; // PDO
     echo $config['db']['username']; // username
     echo $config['db']['password']; // p4ssw0rd
+
+
+[![Bitdeli Badge](https://d2weczhvl823v0.cloudfront.net/orno/config/trend.png)](https://bitdeli.com/free "Bitdeli Badge")
+
