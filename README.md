@@ -1,6 +1,11 @@
 # Orno\Config
 
-[![Buildi Status](https://travis-ci.org/orno/config.png?branch=master)](https://travis-ci.org/orno/config) [![Latest Stable Version](https://poser.pugx.org/orno/config/v/stable.png)](https://packagist.org/packages/orno/config) [![Total Downloads](https://poser.pugx.org/orno/config/downloads.png)](https://packagist.org/packages/orno/config)
+[![Latest Version](http://img.shields.io/packagist/v/orno/config.svg?style=flat)](https://packagist.org/packages/orno/config)
+[![Software License](https://img.shields.io/badge/license-MIT-brightgreen.svg?style=flat)](LICENSE.md)
+[![Build Status](https://img.shields.io/travis/orno/config/master.svg?style=flat)](https://travis-ci.org/orno/config)
+[![Coverage Status](https://img.shields.io/scrutinizer/coverage/g/orno/config.svg?style=flat)](https://scrutinizer-ci.com/g/orno/config/code-structure)
+[![Quality Score](https://img.shields.io/scrutinizer/g/orno/config.svg?style=flat)](https://scrutinizer-ci.com/g/orno/config)
+[![Total Downloads](https://img.shields.io/packagist/dt/orno/config.svg?style=flat)](https://packagist.org/packages/orno/config)
 
 A package designed to DRY up the setting and retrieving of config items.
 
