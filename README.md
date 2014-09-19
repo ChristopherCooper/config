@@ -1,4 +1,4 @@
-# Orno\Config
+# Orno\Config by [@philipobenito](https://twitter.com/philipobenito)
 
 [![Latest Version](http://img.shields.io/packagist/v/orno/config.svg?style=flat)](https://packagist.org/packages/orno/config)
 [![Software License](https://img.shields.io/badge/license-MIT-brightgreen.svg?style=flat)](LICENSE.md)
