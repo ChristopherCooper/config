@@ -8,7 +8,7 @@ use Orno\Config\File\JsonFileLoader;
 use Orno\Config\File\IniFileLoader;
 use Orno\Config\File\XmlFileLoader;
 
-class FileLoaderTest extends \PHPUnit_Framework_Testcase
+class FileLoaderTest extends \PHPUnit_Framework_TestCase
 {
     public function testParsesArrayFileWithoutKey()
     {

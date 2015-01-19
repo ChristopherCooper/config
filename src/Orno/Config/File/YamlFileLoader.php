@@ -20,7 +20,7 @@ class YamlFileLoader extends AbstractFileLoader
     public function parse()
     {
         try {
-            $array = (array) Yaml::parse($this->file);
+            $array = (array) Yaml::parse(file_get_contents($this->file));
         } catch (\Exception $e) {
             throw new Exception\ParseException($e->getMessage(), 0, $e);
         }
